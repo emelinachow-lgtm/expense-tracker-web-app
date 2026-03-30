@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:    #193551;
+  --white:   #fcfcfc;
+  --pink:    #edacb1;
+  --green:   #ced78d;
+  --teal:    #5c8180;
+  --lav:     #e7cfe8;
+  --bg:      #f0f2f5;
+  --card:    #ffffff;
+  --border:  rgba(25,53,81,0.1);
+  --muted:   #7a8fa6;
+  --shadow:  0 2px 12px rgba(25,53,81,0.08);
+  --radius:  16px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--navy);
+  min-height: 100vh;
+}
+
+h1,h2,h3,h4 { font-family: 'Sora', sans-serif; }
+
+button { cursor: pointer; font-family: 'DM Sans', sans-serif; }
+
+input, select, textarea {
+  font-family: 'DM Sans', sans-serif;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--teal) !important;
+  box-shadow: 0 0 0 3px rgba(92,129,128,0.15);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+
+* {
+  outline: none !important;
+}
+
+/* ── Mobile Responsiveness ── */
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    height: auto !important;
+    padding: 16px 20px !important;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Body padding */
+  div[style*="padding: 32px 40px"] {
+    padding: 16px 16px !important;
+  }
+
+  /* Stat cards — stack vertically */
+  div[style*="repeat(3,1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Charts — stack vertically */
+  div[style*="gridTemplateColumns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Table — allow horizontal scroll */
+  table {
+    min-width: 600px;
+  }
+
+  /* Header font sizes */
+  div[style*="fontSize: 30"] {
+    font-size: 22px !important;
+  }
+
+  div[style*="fontSize: 18"] {
+    font-size: 14px !important;
+  }
+
+  /* Add expense button */
+  button[style*="fontSize: 16"] {
+    font-size: 14px !important;
+    padding: 8px 14px !important;
+  }
+
+  /* Modal width */
+  div[style*="maxWidth: 480"] {
+    max-width: 90vw !important;
+    padding: 24px 20px !important;
+  }
+
+  /* Category + Amount grid in form */
+  div[style*="gridTemplateColumns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}

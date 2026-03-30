@@ -30,7 +30,6 @@ button { cursor: pointer; font-family: 'DM Sans', sans-serif; }
 
 input, select, textarea {
   font-family: 'DM Sans', sans-serif;
-  outline: none;
 }
 
 input:focus, select:focus, textarea:focus {

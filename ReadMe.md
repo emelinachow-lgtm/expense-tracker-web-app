@@ -1,6 +1,6 @@
 # Expense Tracker
 
-A single-page web application that helps users monitor and categorise their personal spending. Users can log expenses, view spending breakdowns by category, and track monthly expenditure trends - all from one seamless dashboard.
+A single-page web application that helps users monitor and categorise their personal spending. Users can log expenses, view spending breakdowns by category, and track monthly expenditure trends all from one seamless dashboard.
 
 ---
 

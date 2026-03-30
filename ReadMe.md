@@ -1,6 +1,6 @@
-# Budget Tracker
+# Expense Tracker
 
-A single-page web application that helps users monitor and categorise their personal spending. Users can log expenses, view spending breakdowns by category, and track monthly expenditure trends — all from one seamless dashboard.
+A single-page web application that helps users monitor and categorise their personal spending. Users can log expenses, view spending breakdowns by category, and track monthly expenditure trends - all from one seamless dashboard.
 
 ---
 
@@ -14,8 +14,8 @@ A single-page web application that helps users monitor and categorise their pers
 | Backend | Node.js + Express |
 | Database | MySQL |
 | API | RESTful API (JSON) |
-| Routing | React state-based (no React Router needed — SPA) |
-| Deployment | Not deployed — runs locally via Vite dev server |
+| Routing | React state-based (no React Router needed - SPA) |
+| Deployment | Not deployed. Runs locally via Vite dev server |
 
 ---
 
@@ -64,4 +64,4 @@ expense-tracker/
 
 ## Challenges Overcome
 
-Setting up CORS between the React frontend and Express backend was an initial hurdle, particularly on macOS where port 5000 is reserved by AirPlay Receiver — this was resolved by switching to port 3001. Building fully custom UI components for the dropdown and date picker without external libraries required careful handling of outside-click detection and form submission prevention using `type="button"`. Managing shared state across multiple components, such as syncing the pie chart category filter with the expense table, required careful lifting of state to the parent `App.jsx` component. Ensuring the app behaved as a true SPA meant handling all CRUD operations through React state updates rather than page reloads, with every change instantly reflected across the dashboard.
+Setting up CORS between the React frontend and Express backend was an initial hurdle, particularly on macOS where port 5000 is reserved by AirPlay Receiver. This was resolved by switching to port 3001. Building fully custom UI components for the dropdown and date picker without external libraries required careful handling of outside-click detection, keyboard navigability, and form submission prevention using `type="button"`. A timezone bug caused dates to shift back by one day when stored and retrieved from MySQL. This was resolved by building date strings directly using padded values rather than relying on JavaScript's `toISOString()` which converts to UTC. Managing shared state across multiple components, such as syncing the pie chart category filter with the expense table and passing chart click events up to the parent, required careful lifting of state to `App.jsx`. Making the app fully mobile responsive while using inline styles throughout required a reactive `isMobile` hook using `window.innerWidth` and a `resize` event listener rather than CSS media queries, since media queries cannot target inline styles directly.
